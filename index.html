@@ -50,13 +50,13 @@
             overflow-x: hidden;
         }
 
-        /* 6. 手機版視覺優化：關鍵地名、地址、站名強制不換行 */
+        /* 關鍵地名、地址、站名強制不換行 */
         .no-wrap {
             white-space: nowrap;
             display: inline-block;
         }
 
-        /* 1. 頂端固定毛玻璃質感導航列 */
+        /* 頂端固定毛玻璃質感導航列 */
         .glass-nav {
             background: rgba(250, 248, 245, 0.8);
             backdrop-filter: blur(14px);
@@ -64,7 +64,7 @@
             border-bottom: 1px solid rgba(212, 163, 115, 0.22);
         }
 
-        /* 2. 藝術感倒數計時器：獨立白色微光卡片與柔和陰影 */
+        /* 藝術感倒數計時器：獨立白色微光卡片與柔和陰影 */
         .glow-card {
             background: linear-gradient(145deg, #ffffff 0%, #fcfaf6 100%);
             box-shadow: 0 12px 28px -6px rgba(212, 163, 115, 0.18),
@@ -81,7 +81,7 @@
             flex-shrink: 0;
         }
 
-        /* 7. 交通指引摺疊面板 (Accordion) 過渡 */
+        /* 交通指引摺疊面板 (Accordion) 過渡 */
         .accordion-content {
             display: grid;
             grid-template-rows: 0fr;
@@ -156,7 +156,7 @@
         </span>
     </button>
 
-    <!-- 1. 頂端固定毛玻璃導航列 -->
+    <!-- 頂端固定毛玻璃導航列 -->
     <header class="fixed top-0 left-0 right-0 z-50 glass-nav transition-all duration-300">
         <div class="max-w-5xl mx-auto px-4 sm:px-6 h-16 flex items-center justify-between">
             <a href="#top" class="font-en text-xl sm:text-2xl font-semibold tracking-widest text-morandi-charcoal flex items-center gap-1.5">
@@ -166,7 +166,14 @@
             </a>
 
             <nav class="flex items-center space-x-5 sm:space-x-8 text-sm sm:text-base tracking-wider">
-    <!-- 3. 首頁全螢幕封面背景輪播 (8 張婚紗照自動輪播) -->
+                <a href="#about" class="text-morandi-charcoal hover:text-morandi-gold transition-colors py-2">關於我們</a>
+                <a href="#details" class="text-morandi-charcoal hover:text-morandi-gold transition-colors py-2">婚禮詳情</a>
+                <a href="#rsvp" class="px-4 py-1.5 rounded-full bg-morandi-gold text-white hover:bg-morandi-gold/90 transition-all shadow-sm">出席回函</a>
+            </nav>
+        </div>
+    </header>
+
+    <!-- 首頁全螢幕封面背景輪播 (8 張婚紗照自動輪播) -->
     <section id="top" class="relative w-full h-screen min-h-[600px] flex items-end justify-center overflow-hidden">
         <div id="hero-carousel" class="absolute inset-0 w-full h-full">
             <img
@@ -256,7 +263,7 @@
         </div>
     </section>
 
-    <!-- 關於我們 & 2. 藝術感倒數計時器 -->
+    <!-- 關於我們 & 藝術感倒數計時器 -->
     <section id="about" class="py-20 sm:py-28 px-4 sm:px-6 max-w-4xl mx-auto text-center">
         <span class="font-en italic text-morandi-gold text-lg sm:text-xl tracking-widest block mb-2">Save The Date</span>
         <h2 class="font-tc text-2xl sm:text-3xl font-medium tracking-[0.2em] text-morandi-charcoal mb-6">
@@ -267,7 +274,7 @@
             期盼在這個充滿愛與溫暖的日子，有最重要的您一同參與、分享喜悅。
         </p>
 
-        <!-- 2. 倒數計時器：獨立白色微光卡片 + 柔和陰影 + 圓角 + 垂直細線分隔 -->
+        <!-- 倒數計時器 -->
         <div class="max-w-2xl mx-auto">
             <div class="grid grid-cols-2 sm:grid-cols-4 gap-3.5 sm:gap-5">
                 <!-- Days -->
@@ -313,7 +320,7 @@
         </div>
     </section>
 
-    <!-- 3. 垂直 V-Card 婚禮詳情 & 7. 摺疊式交通指引 -->
+    <!-- 垂直 V-Card 婚禮詳情 & 摺疊式交通指引 -->
     <section id="details" class="py-16 sm:py-24 px-4 sm:px-6 bg-morandi-sand/60 border-y border-morandi-oat/60">
         <div class="max-w-xl mx-auto">
             <div class="text-center mb-12">
@@ -391,7 +398,7 @@
                         </div>
                     </div>
 
-                    <!-- 7. 交通指引：隱藏摺疊面板 (Accordion) -->
+                    <!-- 交通指引：隱藏摺疊面板 (Accordion) -->
                     <div class="pt-4 text-left">
                         <div class="border border-morandi-oat rounded-2xl overflow-hidden bg-morandi-cream/65">
                             <button
@@ -446,7 +453,7 @@
         </div>
     </section>
 
-    <!-- 4, 5, 8. 出席回函 RSVP 區塊 -->
+    <!-- 出席回函 RSVP 區塊 -->
     <section id="rsvp" class="py-20 sm:py-28 px-4 sm:px-6 max-w-2xl mx-auto">
         <div class="text-center mb-12">
             <span class="font-en italic text-morandi-gold text-lg sm:text-xl tracking-widest block mb-1">R.S.V.P.</span>
@@ -456,7 +463,7 @@
             </p>
         </div>
 
-        <!-- 5. 隱藏式 Iframe 提交技術 -->
+        <!-- 隱藏式 Iframe 提交技術 -->
         <iframe name="hidden_iframe" id="hidden_iframe" style="display:none;"></iframe>
 
         <div class="bg-white rounded-3xl shadow-card border border-morandi-oat/75 p-6 sm:p-10">
@@ -602,7 +609,7 @@
                     >
                 </div>
 
-                <!-- 8. 智能表單邏輯：僅在「參加午宴人數 > 0」時顯示 -->
+                <!-- 智能表單邏輯：僅在「參加午宴人數 > 0」時顯示 -->
                 <div id="conditional-dining-fields" class="hidden space-y-6 p-5 rounded-2xl bg-morandi-sand/55 border border-morandi-gold/30 transition-all duration-300">
                     <p class="text-xs text-morandi-sage font-medium tracking-wider flex items-center gap-1.5">
                         <span class="w-1.5 h-1.5 rounded-full bg-morandi-sage"></span>
@@ -864,7 +871,6 @@
             const highchairSelect = document.getElementById('field-highchair');
             const dietarySelect = document.getElementById('field-dietary');
 
-            // 綁定所有支援「其他 (__other_option__)」的下拉選單
             const otherMappings = [
                 { selectId: 'field-relation', inputId: 'field-relation-other' },
                 { selectId: 'field-ceremony', inputId: 'field-ceremony-other' },
@@ -902,7 +908,7 @@
                 const val = guestsSelect.value || '';
                 if (val === '__other_option__') {
                     const otherText = guestsOtherInput.value.trim();
-                    if (otherText === '') return 1; // 選擇其他時先展開讓賓客填寫
+                    if (otherText === '') return 1;
                     const parsedOther = parseInt(otherText.replace(/[^\d]/g, ''), 10);
                     return isNaN(parsedOther) ? 1 : parsedOther;
                 }
@@ -971,7 +977,6 @@
                 submitBtn.disabled = true;
                 submitBtn.innerHTML = '傳送中... <span class="font-en text-xs tracking-widest ml-1">SENDING</span>';
 
-                // 安全備援逾時顯示成功視窗
                 setTimeout(() => {
                     completeSubmission();
                 }, 1500);
@@ -1053,7 +1058,6 @@
                     },
                     onStateChange: function (event) {
                         if (event.data === YT.PlayerState.PLAYING) {
-                            // 確保每次啟動都從 52 秒之後播放
                             if (event.target.getCurrentTime() < 51.5) {
                                 event.target.seekTo(52, true);
                             }
@@ -1069,7 +1073,6 @@
             });
         };
 
-        // 針對 Chrome / Safari 自動播放政策：在賓客第一次點擊、觸控或捲動頁面時立即啟動播放
         function unlockAudioOnFirstInteraction() {
             if (!isMusicPlaying && !userManuallyPaused && playerReady) {
                 startMusicFrom52();
